@@ -1228,3 +1228,864 @@ body {
         height: 40px;
     }
 }
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 10%;
+    background: #081b29;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.projects-section .heading {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.projects-intro {
+    max-width: 750px;
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+    color: #aebbc5;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+    position: relative;
+
+    padding: 32px;
+
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    border:
+        1px solid rgba(0, 238, 255, .15);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -100px;
+
+    background: #0ef;
+
+    opacity: .05;
+
+    border-radius: 50%;
+
+    transition: .4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(0, 238, 255, .55);
+
+    box-shadow:
+        0 15px 45px rgba(0, 238, 255, .08);
+}
+
+.project-card:hover::before {
+    transform: scale(1.5);
+}
+
+
+/* =========================
+   PROJECT NUMBER
+========================= */
+
+.project-number {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    font-size: 13px;
+
+    color: #49616e;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   PROJECT ICON
+========================= */
+
+.project-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(0, 238, 255, .08);
+
+    border:
+        1px solid rgba(0, 238, 255, .25);
+}
+
+.project-icon i {
+    font-size: 28px;
+
+    color: #0ef;
+}
+
+
+/* =========================
+   PROJECT CATEGORY
+========================= */
+
+.project-category {
+    color: #0ef;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   PROJECT TITLE
+========================= */
+
+.project-card h3 {
+    color: #fff;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PROJECT DESCRIPTION
+========================= */
+
+.project-card p {
+    color: #aebbc5;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: auto;
+
+    margin-bottom: 25px;
+}
+
+.project-tech span {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    color: #c8d4da;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   PROJECT LINKS
+========================= */
+
+.project-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+}
+
+.project-links a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #dce8ed;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.project-links a:hover {
+    color: #0ef;
+}
+
+.project-links i {
+    font-size: 18px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .projects-section {
+        padding: 90px 6%;
+    }
+
+    .projects-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .projects-section {
+        padding: 70px 6%;
+    }
+
+    .projects-section .heading {
+        font-size: 40px;
+    }
+
+    .projects-intro {
+        font-size: 14px;
+
+        margin-bottom: 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 400px;
+
+        padding: 27px;
+    }
+}
+
+
+/* =========================
+   RESUME SECTION
+========================= */
+
+.resume-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 10%;
+    background: #071925;
+}
+
+.resume-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.resume-section .heading {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.resume-intro {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+    color: #aebbc5;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   RESUME HEADER
+========================= */
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 30px;
+
+    margin-bottom: 35px;
+
+    border: 1px solid rgba(0, 238, 255, .15);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.015)
+        );
+}
+
+.resume-label {
+    display: block;
+
+    color: #0ef;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.resume-header h3 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.resume-header p {
+    color: #aebbc5;
+    font-size: 15px;
+}
+
+
+/* =========================
+   RESUME BUTTONS
+========================= */
+
+.resume-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.resume-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    border: 1px solid #0ef;
+
+    border-radius: 30px;
+
+    color: #0ef;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.resume-btn:hover {
+    background: #0ef;
+    color: #081b29;
+
+    box-shadow:
+        0 0 20px rgba(0,238,255,.4);
+}
+
+.resume-btn.primary {
+    background: #0ef;
+    color: #081b29;
+}
+
+.resume-btn.primary:hover {
+    box-shadow:
+        0 0 30px rgba(0,238,255,.5);
+}
+
+
+/* =========================
+   RESUME GRID
+========================= */
+
+.resume-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.35fr .85fr;
+
+    gap: 30px;
+}
+
+
+/* =========================
+   RESUME BLOCK
+========================= */
+
+.resume-block {
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+.resume-block-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.resume-block-title h3 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.resume-title-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(0,238,255,.08);
+
+    border:
+        1px solid rgba(0,238,255,.2);
+}
+
+.resume-title-icon i {
+    color: #0ef;
+    font-size: 22px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    position: relative;
+
+    padding-left: 28px;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 5px;
+    top: 5px;
+    bottom: 5px;
+
+    width: 1px;
+
+    background:
+        rgba(0,238,255,.25);
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-bottom: 35px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -27px;
+    top: 5px;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #0ef;
+
+    box-shadow:
+        0 0 12px #0ef;
+}
+
+.timeline-date {
+    display: inline-block;
+
+    color: #0ef;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+.timeline-item h4 {
+    color: #fff;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.timeline-item h5 {
+    color: #9aaeb9;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+.timeline-item p {
+    color: #aebbc5;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   RIGHT CARDS
+========================= */
+
+.resume-card {
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    transition: .3s;
+}
+
+.resume-card:hover {
+    border-color:
+        rgba(0,238,255,.3);
+
+    transform: translateY(-4px);
+}
+
+.resume-card-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0,238,255,.08);
+}
+
+.resume-card-icon i {
+    color: #0ef;
+    font-size: 22px;
+}
+
+.resume-card h3 {
+    color: #fff;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.resume-card p {
+    color: #aebbc5;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SKILLS TAGS
+========================= */
+
+.resume-skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.resume-skills span {
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    color: #cbd8de;
+
+    background:
+        rgba(0,238,255,.05);
+
+    border:
+        1px solid rgba(0,238,255,.12);
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   LANGUAGES
+========================= */
+
+.language-item {
+    margin-bottom: 18px;
+}
+
+.language-item:last-child {
+    margin-bottom: 0;
+}
+
+.language-item > div:first-child {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+}
+
+.language-item span {
+    color: #dce8ed;
+    font-size: 13px;
+}
+
+.language-item small {
+    color: #718692;
+    font-size: 11px;
+}
+
+.language-bar {
+    width: 100%;
+    height: 5px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.language-bar span {
+    display: block;
+
+    height: 100%;
+
+    background: #0ef;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 10px rgba(0,238,255,.5);
+}
+
+
+/* =========================
+   CONTACT ICONS
+========================= */
+
+.resume-card p i {
+    color: #0ef;
+
+    margin-right: 8px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    .resume-section {
+        padding: 80px 6%;
+    }
+
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .resume-section {
+        padding: 70px 5%;
+    }
+
+    .resume-section .heading {
+        font-size: 40px;
+    }
+
+    .resume-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+    }
+
+    .resume-actions {
+        width: 100%;
+    }
+
+    .resume-btn {
+        flex: 1;
+    }
+
+    .resume-block {
+        padding: 22px;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+}
